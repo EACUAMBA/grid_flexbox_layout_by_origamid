@@ -1,0 +1,27 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: cadetblue;
+}
+
+.header .menu{
+    display: flex;
+}
+
+.menu li{
+    margin-left: 10px;
+}
+
+.menu li a{
+    display: block;
+    padding: 10px;
+    background-color: tomato;
+}
+
+.title{
+    text-align: center;
+    margin: 50px auto;
+}

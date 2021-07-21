@@ -1,0 +1,15 @@
+
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px; /*Costuma ser a mesma que das outras secções.*/
+    margin: 0 auto;
+}
+
+.flex > figure {/*Chamando a figura dentro do flex, outras figures dentro de outros elemntos não serão afectados.*/
+    flex-grow: 1; /**/
+    flex-shrink: 1; /**/
+    flex-basis: 200px; /**/
+    margin: 10px;
+}

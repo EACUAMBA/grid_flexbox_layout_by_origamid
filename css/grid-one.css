@@ -1,0 +1,44 @@
+/*CSS GRID ONE*/
+
+.grid{
+    display: grid;
+
+    /*Dividir e dizer o número de colunas*/
+    /*grid-template-columns: 1fr 1fr 1fr; !*Vai criar três colunas com o mesmo tamanho, formúla tamanho do espaço dividido pelo numero de colunas que voce quer.*!*/
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 800px; /* Por causa das margens poded ser que não alinhe então coloque um size - o valor das margens que sobra.*/
+    padding: 10px;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+.grid > figure:nth-child(n + 4){ /*Valor dentro do nth-child() indica o numero de elementos que você deseja selecionar, podendo até coloca ruma formúla matematica tipo n+1, elemnto depois do 1.*/
+    background-color: #ff6347;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    align-items: center;
+}
+
+.grid > figure.anuncio{ /*O selector :nth-child() é mais importante que o selector de classe, então devemos equilibrar, usando o mesmo selector*/
+    grid-column: 1;
+    grid-row: 2 / 5;
+    display: block;
+}
+
+/*Vamos usar media query para responsividade*/
+@media screen and (max-width: 600px){
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+    .grid > figure:nth-child(n + 4){
+        display: block;
+    }
+    .grid > figure.anuncio{
+        grid-column: auto;
+        grid-row: auto;
+        order: -1;
+    }
+}
+
