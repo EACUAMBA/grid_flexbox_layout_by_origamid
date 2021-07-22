@@ -1,6 +1,6 @@
 # Aprendendo como e quando utilizar GRID e FLEXBOX
 
-##Conteúdo abordado
+## Conteúdo abordado
 
 - Flexbox (Construir um menu e uma pequena galeria de imagens);
 ![alt text](./img/flexbox-galeria-e-menu.png?raw=true)
